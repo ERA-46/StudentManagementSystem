@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d10e8149-77b7-4a6b-9cc2-91b672d4827a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT *
+FROM Staff]]>
+	</queryString>
+	<field name="Staff_ID" class="java.lang.Integer"/>
+	<field name="Name" class="java.lang.String"/>
+	<field name="Address" class="java.lang.String"/>
+	<field name="Email" class="java.lang.String"/>
+	<field name="Contact" class="java.lang.String"/>
+	<field name="NIC" class="java.lang.String"/>
+	<field name="Type" class="java.lang.String"/>
+	<field name="Grade" class="java.lang.String"/>
+	<field name="Subject" class="java.lang.String"/>
+	<variable name="Name_1" class="java.lang.Integer" resetType="Column" calculation="Count">
+		<variableExpression><![CDATA[$F{Name}]]></variableExpression>
+	</variable>
+	<group name="Staff_ID">
+		<groupExpression><![CDATA[$F{Staff_ID}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="87" splitType="Stretch">
+			<staticText>
+				<reportElement x="150" y="8" width="266" height="31" uuid="abbb200a-fe6b-4592-9616-7325eb5d8a96"/>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[STAFF MEMBER REPORT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="188" y="44" width="186" height="20" uuid="5bdd04f6-a99e-4dcb-84ac-41a7b6c02121"/>
+				<text><![CDATA[Cambridge English Language School]]></text>
+			</staticText>
+			<image>
+				<reportElement x="70" y="3" width="73" height="64" uuid="a667f1f2-d950-4bf6-9cf7-5898a936e548"/>
+				<imageExpression><![CDATA["H:\\SLIIT Lectures\\2nd Year\\2nd Semester\\Project and Professional Aspects\\Project\\NetBeans\\CELS M sys (10.05)\\src\\Frontend\\Icons\\Orginal LogoRezied.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="30" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="38" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="25" height="20" uuid="8374964f-3645-4639-b847-2568c928e99d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="0" width="73" height="20" uuid="1cb58e9c-488c-47a0-82e3-2e593783a533"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="0" width="100" height="20" uuid="45b52f9e-bf2e-4e2d-aa63-4b923dba888c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="264" y="0" width="105" height="20" uuid="1364c384-caa1-4038-ad23-3596971b9bdd"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="378" y="0" width="100" height="20" uuid="1c4fe838-2fa9-47fb-acc2-d481e341f06d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contact]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="478" y="0" width="77" height="20" uuid="4f4ac065-58ee-4674-b442-1e81f92f9785"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Type]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="43" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="51" height="20" uuid="07c88eb2-74d3-493d-95ac-06e888cb8b0f"/>
+				<textFieldExpression><![CDATA[$F{Staff_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="51" y="0" width="99" height="39" uuid="d7960d95-a8c2-4e6a-a104-f7225b75379d"/>
+				<textFieldExpression><![CDATA[$F{Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="0" width="114" height="39" uuid="91419100-9ac9-4a43-8b7a-daa2d8f83cc4"/>
+				<textFieldExpression><![CDATA[$F{Address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="264" y="0" width="114" height="20" uuid="7c60864f-939a-4edf-9b65-6346a14e1a99"/>
+				<textFieldExpression><![CDATA[$F{Email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="378" y="0" width="100" height="20" uuid="5c9c93ed-d4b7-4641-94ca-338abdf4b6db"/>
+				<textFieldExpression><![CDATA[$F{Contact}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="478" y="0" width="77" height="39" uuid="01242eb6-44df-41af-8ba3-5334c0724b8b"/>
+				<textFieldExpression><![CDATA[$F{Type}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="189" splitType="Stretch"/>
+	</summary>
+</jasperReport>
